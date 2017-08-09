@@ -1,36 +1,36 @@
 (ns status-im.ui.screens.events
   (:require
-    status-im.chat.handlers
-    status-im.ui.screens.group.chat-settings.events
-    status-im.ui.screens.navigation
-    status-im.ui.screens.contacts.events
-    status-im.ui.screens.discover.events
-    status-im.ui.screens.group.events
-    status-im.profile.handlers
-    status-im.commands.handlers.loading
-    status-im.commands.handlers.jail
-    status-im.ui.screens.qr-scanner.events
-    status-im.ui.screens.accounts.events
-    status-im.protocol.handlers
-    status-im.transactions.handlers
-    status-im.network.handlers
-    status-im.debug.handlers
-    status-im.bots.handlers
+   status-im.chat.handlers
+   status-im.ui.screens.group.chat-settings.events
+   status-im.ui.screens.navigation
+   status-im.ui.screens.contacts.events
+   status-im.ui.screens.discover.events
+   status-im.ui.screens.group.events
+   status-im.ui.screens.profile.events
+   status-im.commands.handlers.loading
+   status-im.commands.handlers.jail
+   status-im.ui.screens.qr-scanner.events
+   status-im.ui.screens.accounts.events
+   status-im.protocol.handlers
+   status-im.transactions.handlers
+   status-im.network.handlers
+   status-im.debug.handlers
+   status-im.bots.handlers
 
-    [re-frame.core :refer [dispatch reg-fx]]
-    [status-im.utils.handlers :refer [register-handler-db register-handler-fx]]
-    [status-im.ui.screens.db :refer [app-db]]
-    [status-im.data-store.core :as data-store]
-    [taoensso.timbre :as log]
-    [status-im.utils.crypt :as crypt]
-    [status-im.components.status :as status]
-    [status-im.components.permissions :as permissions]
+   [re-frame.core :refer [dispatch reg-fx]]
+   [status-im.utils.handlers :refer [register-handler-db register-handler-fx]]
+   [status-im.ui.screens.db :refer [app-db]]
+   [status-im.data-store.core :as data-store]
+   [taoensso.timbre :as log]
+   [status-im.utils.crypt :as crypt]
+   [status-im.components.status :as status]
+   [status-im.components.permissions :as permissions]
 
-    [status-im.utils.types :as types]
-    [status-im.constants :refer [console-chat-id]]
-    [status-im.utils.instabug :as inst]
-    [status-im.utils.platform :as platform]
-    [status-im.js-dependencies :as dependencies]))
+   [status-im.utils.types :as types]
+   [status-im.constants :refer [console-chat-id]]
+   [status-im.utils.instabug :as inst]
+   [status-im.utils.platform :as platform]
+   [status-im.js-dependencies :as dependencies]))
 
 ;;;; COFX
 
@@ -250,6 +250,6 @@
                                    (dispatch [:update-geolocation (js->clj % :keywordize-keys true)])))))))]}))
 
 (register-handler-db
-  :update-geolocation
-  (fn [db [_ geolocation]]
-    (assoc db :geolocation geolocation)))
+ :update-geolocation
+ (fn [db [_ geolocation]]
+   (assoc db :geolocation geolocation)))
