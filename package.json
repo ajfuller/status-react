@@ -22,7 +22,6 @@
     "babel-plugin-transform-regenerator": "6.20.0",
     "babel-preset-react-native": "1.9.0",
     "babel-register": "6.18.0",
-    "bignumber.js": "^4.0.2",
     "browserify-zlib": "^0.1.4",
     "buffer": "^3.6.0",
     "chance": "1.0.4",
@@ -86,7 +85,7 @@
     "tty-browserify": "0.0.0",
     "url": "^0.10.3",
     "vm-browserify": "0.0.4",
-    "web3": "0.20.0"
+    "web3": "github:status-im/web3.js#status-develop"
   },
   "browser": {
     "crypto": "react-native-crypto",
